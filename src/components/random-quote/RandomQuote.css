@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+.app{
+    background: url(../../assets/image/background.gif) no-repeat center center/cover;
+    width: 100%;height: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+.app::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+.card{
+    position: relative;
+    color: white;
+    width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+.card>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+button{
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 1px 1px #FFFFFF;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    color: #222;
+    animation: none;
+}
+button:hover{
+    animation: shake 0.3s ease infinite;
+}
+.custom-loader {
+    width: 70px;
+    height: 70px;
+    --c:radial-gradient(farthest-side,#ffffff 90%,#0000);
+    background:
+      var(--c) 0    0,
+      var(--c) 100% 0,
+      var(--c) 100% 100%,
+      var(--c) 0    100%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    animation:d8 .5s infinite; 
+}
+  
+@keyframes d8 {
+    100% {background-position: 100% 0,100% 100%,0 100%,0 0}
+}
+@keyframes shake {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-5px);}
+    50% {transform: translateX(5px);}
+    75% {transform: translateX(-5px);}
+    100% {transform: translateX(0);}
+  }
