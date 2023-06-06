@@ -28,16 +28,12 @@ class RandomQuote extends React.Component {
 
     return (
       <div className="app">
-        <div className="card" style={{border:`${loading?"none":"1px solid white"}`}}>
-          {loading ? (
-            <div className="custom-loader"></div>
-          ) : (
-            <div>
+        {loading?<div className="custom-loader"></div>:
+        <div className="card">
               <h1 className="heading">{advice}</h1>
               <button className="button" onClick={this.fetchAdvice}><p>GIVE ME ADVICE</p></button>
-            </div>
-          )}
-        </div>
+        </div>}
+        
       </div>
     );
   }

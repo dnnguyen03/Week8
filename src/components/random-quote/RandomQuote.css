@@ -35,15 +35,9 @@
     justify-content: center;
     padding: 20px;
     border-radius: 20px;
+    border: 1px solid white;
     backdrop-filter: blur(5px);
-}
-.card>div{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 button{
     padding: 10px 25px;
@@ -61,6 +55,7 @@ button:hover{
     animation: shake 0.3s ease infinite;
 }
 .custom-loader {
+    position: relative;
     width: 70px;
     height: 70px;
     --c:radial-gradient(farthest-side,#ffffff 90%,#0000);
